@@ -1,25 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
+import styled from 'styled-components';
+import HubDashboard from './components/DeFiPage/HubDashboard';
+import Footer from './components/commons/Footer';
+import Header from './components/commons/Header';
+import NFTBox from './components/NftPage/NftBox';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <Container>
+     {/* <Header /> */}
+      <NFTBox />
+      {/* <Footer /> */}
+   </Container>
   );
 }
-
+const Container = styled.div`
+  display:flex;
+  background-color:#f7f8f9;
+  flex-direction:column;
+  flex:1;
+  height:100vh;
+  padding-left:25%;
+  padding-right:25%;
+`
 export default App;
